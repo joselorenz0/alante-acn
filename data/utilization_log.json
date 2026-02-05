@@ -1,260 +1,202 @@
 [
   {
-    "Patient": "Smith, James",
-    "Date": "12/10/2025",
-    "Org": "ACN",
-    "Event": "INP DC",
-    "Facility": "HonorHealth Osborn",
-    "Diagnosis": "Palpitations",
-    "ICD10": "R00.2",
-    "Tags": [
-      "SDOH"
-    ]
-  },
-  {
-    "Patient": "Johnson, Mary",
-    "Date": "12/10/2025",
-    "Org": "ACN",
-    "Event": "INP Admit",
-    "Facility": "Abrazo Central Campus",
-    "Diagnosis": "Acute cholecystitis",
-    "ICD10": "K81.0",
-    "Tags": [
-      "CCM",
-      "TCM",
-      "SDOH"
-    ]
-  },
-  {
     "Patient": "Williams, Robert",
-    "Date": "12/16/2025",
+    "Date": "12/23/2025",
     "Org": "ACN",
-    "Event": "ER DC",
-    "Facility": "Banner Desert Medical Center",
+    "Event": "ER Admit",
+    "Facility": "HonorHealth John C. Lincoln",
     "Diagnosis": "Type 2 diabetes mellitus without complications",
     "ICD10": "E11.9",
-    "Tags": [
-      "SDOH"
-    ]
-  },
-  {
-    "Patient": "Brown, Patricia",
-    "Date": "12/12/2025",
-    "Org": "ACN",
-    "Event": "ER DC",
-    "Facility": "Banner Univ Phoenix",
-    "Diagnosis": "Acute cholecystitis",
-    "ICD10": "K81.0",
-    "Tags": [
-      "RPM"
-    ]
-  },
-  {
-    "Patient": "Jones, John",
-    "Date": "12/21/2025",
-    "Org": "ACN",
-    "Event": "INP Admit",
-    "Facility": "Banner Estrella Medical Center",
-    "Diagnosis": "Acute cholecystitis",
-    "ICD10": "K81.0",
-    "Tags": [
-      "CCM"
-    ]
-  },
-  {
-    "Patient": "Nguyen, Linda",
-    "Date": "12/18/2025",
-    "Org": "ACN",
-    "Event": "INP Admit",
-    "Facility": "Banner Thunderbird Medical Center",
-    "Diagnosis": "Heart failure, unspecified",
-    "ICD10": "I50.9",
-    "Tags": [
-      "CCM",
-      "SDOH"
-    ]
-  },
-  {
-    "Patient": "Martinez, Carlos",
-    "Date": "12/14/2025",
-    "Org": "ACN",
-    "Event": "INP Admit",
-    "Facility": "Banner Estrella Medical Center",
-    "Diagnosis": "Pneumonia, unspecified organism",
-    "ICD10": "J18.9",
-    "Tags": [
-      "SDOH"
-    ]
+    "Tags": "ACP"
   },
   {
     "Patient": "Garcia, Sofia",
-    "Date": "12/11/2025",
+    "Date": "12/05/2025",
     "Org": "ACN",
     "Event": "ER Admit",
     "Facility": "Abrazo Central Campus",
-    "Diagnosis": "Type 2 diabetes mellitus without complications",
-    "ICD10": "E11.9",
-    "Tags": [
-      "TCM",
-      "SDOH",
-      "CCM"
-    ]
+    "Diagnosis": "Migraine headache",
+    "ICD10": "G43.909",
+    "Tags": ""
+  },
+  {
+    "Patient": "Lopez, Maria",
+    "Date": "12/16/2025",
+    "Org": "ACN",
+    "Event": "INP DC",
+    "Facility": "Banner Desert Medical Center",
+    "Diagnosis": "Essential (primary) hypertension",
+    "ICD10": "I10",
+    "Tags": ""
   },
   {
     "Patient": "Brooks, Danielle",
-    "Date": "12/19/2025",
+    "Date": "12/24/2025",
     "Org": "ACN",
-    "Event": "ER DC",
-    "Facility": "Banner Thunderbird Medical Center",
-    "Diagnosis": "Palpitations",
-    "ICD10": "R00.2",
-    "Tags": [
-      "SDOH",
-      "ACP"
-    ]
+    "Event": "INP Admit",
+    "Facility": "Abrazo Central Campus",
+    "Diagnosis": "Heart failure, unspecified",
+    "ICD10": "I50.9",
+    "Tags": ""
   },
   {
     "Patient": "Hernandez, Luis",
-    "Date": "12/14/2025",
-    "Org": "ACN",
-    "Event": "INP DC",
-    "Facility": "Valleywise Medical Center",
-    "Diagnosis": "Chronic obstructive pulmonary disease, unspecified",
-    "ICD10": "J44.9",
-    "Tags": [
-      "CCM",
-      "TCM",
-      "AWV"
-    ]
-  },
-  {
-    "Patient": "Shah, Priya",
-    "Date": "12/18/2025",
+    "Date": "12/17/2025",
     "Org": "ACN",
     "Event": "ER DC",
     "Facility": "Abrazo Central Campus",
-    "Diagnosis": "Chest pain, non-cardiac",
-    "ICD10": "R07.9",
-    "Tags": [
-      "TCM",
-      "RPM",
-      "ACP"
-    ]
+    "Diagnosis": "Pneumonia, unspecified organism",
+    "ICD10": "J18.9",
+    "Tags": "CCM,RPM"
+  },
+  {
+    "Patient": "Johnson, Mary",
+    "Date": "12/08/2025",
+    "Org": "ACN",
+    "Event": "ER DC",
+    "Facility": "St Luke's Medical Center Phoenix",
+    "Diagnosis": "Type 2 diabetes mellitus without complications",
+    "ICD10": "E11.9",
+    "Tags": "CCM,RPM"
+  },
+  {
+    "Patient": "Nguyen, Linda",
+    "Date": "12/06/2025",
+    "Org": "ACN",
+    "Event": "ER Admit",
+    "Facility": "Banner Univ Phoenix",
+    "Diagnosis": "Acute kidney injury, resolved",
+    "ICD10": "N17.9",
+    "Tags": "AWV"
+  },
+  {
+    "Patient": "Shah, Priya",
+    "Date": "12/19/2025",
+    "Org": "ACN",
+    "Event": "ER Admit",
+    "Facility": "Banner Univ Phoenix",
+    "Diagnosis": "Sepsis, suspected urinary source",
+    "ICD10": "A41.9",
+    "Tags": "SDOH"
   },
   {
     "Patient": "Kim, Hannah",
     "Date": "12/24/2025",
     "Org": "ACN",
-    "Event": "ER Admit",
-    "Facility": "Abrazo Central Campus",
+    "Event": "INP Admit",
+    "Facility": "Banner Univ Phoenix",
     "Diagnosis": "Heart failure, unspecified",
     "ICD10": "I50.9",
-    "Tags": [
-      "TCM",
-      "RPM"
-    ]
+    "Tags": "CCM"
   },
   {
     "Patient": "Ahmed, Farah",
-    "Date": "12/24/2025",
+    "Date": "12/23/2025",
     "Org": "ACN",
-    "Event": "INP DC",
-    "Facility": "Abrazo Central Campus",
+    "Event": "ER Admit",
+    "Facility": "Valleywise Medical Center",
     "Diagnosis": "Migraine headache",
     "ICD10": "G43.909",
-    "Tags": [
-      "ACP",
-      "TCM",
-      "SDOH"
-    ]
+    "Tags": "TCM"
   },
   {
-    "Patient": "Torres, Ana",
-    "Date": "12/10/2025",
+    "Patient": "Patel, Nisha",
+    "Date": "12/16/2025",
     "Org": "ACN",
-    "Event": "INP DC",
-    "Facility": "HonorHealth John C. Lincoln",
-    "Diagnosis": "Type 2 diabetes mellitus without complications",
-    "ICD10": "E11.9",
-    "Tags": [
-      "RPM",
-      "AWV",
-      "ACP"
-    ]
+    "Event": "INP Admit",
+    "Facility": "Banner Univ Phoenix",
+    "Diagnosis": "Palpitations",
+    "ICD10": "R00.2",
+    "Tags": "AWV"
   },
   {
     "Patient": "O'Connor, Brian",
-    "Date": "12/09/2025",
-    "Org": "ACN",
-    "Event": "INP DC",
-    "Facility": "Banner Desert Medical Center",
-    "Diagnosis": "Migraine headache",
-    "ICD10": "G43.909",
-    "Tags": [
-      "AWV",
-      "CCM"
-    ]
-  },
-  {
-    "Patient": "Walker, Denise",
-    "Date": "12/15/2025",
-    "Org": "ACN",
-    "Event": "INP Admit",
-    "Facility": "HonorHealth John C. Lincoln",
-    "Diagnosis": "Essential (primary) hypertension",
-    "ICD10": "I10",
-    "Tags": [
-      "CCM",
-      "RPM"
-    ]
-  },
-  {
-    "Patient": "Wilson, Thomas",
-    "Date": "12/11/2025",
+    "Date": "12/24/2025",
     "Org": "ACN",
     "Event": "ER DC",
     "Facility": "Banner Desert Medical Center",
     "Diagnosis": "Chest pain, non-cardiac",
     "ICD10": "R07.9",
-    "Tags": [
-      "ACP"
-    ]
+    "Tags": "ACP"
   },
   {
-    "Patient": "Lopez, Maria",
-    "Date": "12/13/2025",
-    "Org": "ACN",
-    "Event": "ER DC",
-    "Facility": "Banner Thunderbird Medical Center",
-    "Diagnosis": "Pneumonia, unspecified organism",
-    "ICD10": "J18.9",
-    "Tags": [
-      "SDOH",
-      "AWV"
-    ]
-  },
-  {
-    "Patient": "Chen, Victor",
+    "Patient": "Walker, Denise",
     "Date": "12/16/2025",
+    "Org": "ACN",
+    "Event": "INP DC",
+    "Facility": "Abrazo Central Campus",
+    "Diagnosis": "Acute cholecystitis",
+    "ICD10": "K81.0",
+    "Tags": "TCM"
+  },
+  {
+    "Patient": "Torres, Ana",
+    "Date": "12/08/2025",
     "Org": "ACN",
     "Event": "ER DC",
     "Facility": "Abrazo Central Campus",
-    "Diagnosis": "Palpitations",
-    "ICD10": "R00.2",
-    "Tags": [
-      "TCM"
-    ]
+    "Diagnosis": "COPD, unspecified",
+    "ICD10": "J44.9",
+    "Tags": "TCM,CCM"
   },
   {
     "Patient": "Foster, Kevin",
-    "Date": "12/16/2025",
+    "Date": "12/20/2025",
+    "Org": "ACN",
+    "Event": "INP DC",
+    "Facility": "Banner Univ Phoenix",
+    "Diagnosis": "Complicated urinary tract infection",
+    "ICD10": "N39.0",
+    "Tags": "RPM"
+  },
+  {
+    "Patient": "Chen, Victor",
+    "Date": "12/08/2025",
+    "Org": "ACN",
+    "Event": "INP DC",
+    "Facility": "St Luke's Medical Center Phoenix",
+    "Diagnosis": "Dizziness and syncope",
+    "ICD10": "R42",
+    "Tags": "ACP"
+  },
+  {
+    "Patient": "Martinez, Carlos",
+    "Date": "12/20/2025",
     "Org": "ACN",
     "Event": "ER Admit",
-    "Facility": "HonorHealth Osborn",
-    "Diagnosis": "Chronic obstructive pulmonary disease, unspecified",
-    "ICD10": "J44.9",
-    "Tags": [
-      "ACP"
-    ]
+    "Facility": "Valleywise Medical Center",
+    "Diagnosis": "Chest pain, non-cardiac",
+    "ICD10": "R07.9",
+    "Tags": "CCM"
+  },
+  {
+    "Patient": "Wilson, Thomas",
+    "Date": "12/11/2025",
+    "Org": "ACN",
+    "Event": "INP DC",
+    "Facility": "Banner Desert Medical Center",
+    "Diagnosis": "Syncope and collapse",
+    "ICD10": "R55",
+    "Tags": ""
+  },
+  {
+    "Patient": "Brown, Patricia",
+    "Date": "12/05/2025",
+    "Org": "ACN",
+    "Event": "INP DC",
+    "Facility": "St Luke's Medical Center Phoenix",
+    "Diagnosis": "Hypertensive heart disease with heart failure",
+    "ICD10": "I11.0",
+    "Tags": "TCM"
+  },
+  {
+    "Patient": "Jones, John",
+    "Date": "12/27/2025",
+    "Org": "ACN",
+    "Event": "INP DC",
+    "Facility": "Valleywise Medical Center",
+    "Diagnosis": "Essential (primary) hypertension",
+    "ICD10": "I10",
+    "Tags": "SDOH"
   }
 ]

@@ -1,200 +1,213 @@
-// Alante Dashboard - static GitHub Pages/SharePoint-friendly
-// Data files live in ./data/*.json
+// Alante Performance Dashboard (static)
+// Data files in /data: performance_metrics.json, program_outcomes.json, utilization_log.json
 
-function fmtNum(n){
-  const x = Number(n);
-  if (Number.isNaN(x)) return '';
-  return x.toLocaleString(undefined, {maximumFractionDigits: 0});
-}
-function fmtPct(n){
-  const x = Number(n);
-  if (Number.isNaN(x)) return '';
-  return `${x.toFixed(1)}%`;
-}
-function uniq(arr){ return Array.from(new Set(arr)); }
-
-async function loadJSON(path){
-  const res = await fetch(path, {cache:'no-store'});
-  if(!res.ok) throw new Error(`HTTP ${res.status} loading ${path}`);
-  return await res.json();
+async function loadJSON(path) {
+  const res = await fetch(path, { cache: "no-store" });
+  if (!res.ok) throw new Error(`Failed to load ${path}: ${res.status}`);
+  return res.json();
 }
 
-function populateSelect(select, values, allLabel){
-  select.innerHTML = '';
-  const optAll = document.createElement('option');
-  optAll.value = '';
-  optAll.textContent = allLabel;
+function $(id) { return document.getElementById(id); }
+
+function isPercentMetric(metric) {
+  return /%|\(\%\)|Rate/i.test(metric);
+}
+
+function formatValue(metric, value) {
+  if (value === null || value === undefined || value === "" || Number.isNaN(Number(value))) return "—";
+  const n = Number(value);
+  if (isPercentMetric(metric)) return `${n.toFixed(1)}%`;
+  // admits/1,000 etc
+  if (Math.abs(n) >= 1000) return n.toLocaleString();
+  // keep up to 1 decimal if needed
+  return Number.isInteger(n) ? n.toString() : n.toFixed(1);
+}
+
+function lowerIsBetter(metric) {
+  return /Readmission|Admits|ER|INP/i.test(metric);
+}
+
+function varianceText(metric, current, benchmark) {
+  const c = Number(current), b = Number(benchmark);
+  if (Number.isNaN(c) || Number.isNaN(b)) return { text: "—", cls: "" };
+  const diff = c - b;
+  const good = lowerIsBetter(metric) ? diff <= 0 : diff >= 0;
+  const cls = good ? "good" : "bad";
+
+  // show pts for percent, else raw
+  if (isPercentMetric(metric)) {
+    const pts = Math.abs(diff).toFixed(1);
+    const arrow = good ? "↓" : "↑"; // for % metrics we still use arrow to indicate direction vs benchmark
+    // But if higher is better, good might be ↑; handle explicitly
+    const arrow2 = lowerIsBetter(metric) ? (good ? "↓" : "↑") : (good ? "↑" : "↓");
+    return { text: `${diff >= 0 ? "+" : ""}${diff.toFixed(1)} pts ${arrow2}`, cls };
+  } else {
+    const arrow2 = lowerIsBetter(metric) ? (good ? "↓" : "↑") : (good ? "↑" : "↓");
+    const val = Math.abs(diff);
+    const txt = Number.isInteger(val) ? val.toString() : val.toFixed(1);
+    return { text: `${diff >= 0 ? "+" : "-"}${txt} ${arrow2}`, cls };
+  }
+}
+
+function buildPerformanceTable(rows) {
+  const tbody = document.querySelector("#performanceTable tbody");
+  tbody.innerHTML = "";
+
+  // group by Section
+  const bySection = {};
+  rows.forEach(r => {
+    const s = (r.Section || "").toUpperCase();
+    bySection[s] = bySection[s] || [];
+    bySection[s].push(r);
+  });
+
+  const order = ["UTILIZATION", "CLINICAL QUALITY"];
+  const sections = order.filter(s => bySection[s] && bySection[s].length).concat(
+    Object.keys(bySection).filter(s => !order.includes(s))
+  );
+
+  sections.forEach(section => {
+    // section header row
+    const trH = document.createElement("tr");
+    trH.className = "section-row";
+    trH.innerHTML = `<td colspan="6">${section}</td>`;
+    tbody.appendChild(trH);
+
+    bySection[section].forEach(r => {
+      const tr = document.createElement("tr");
+      const v = varianceText(r.Metric, r.CurrentMonth, r.Benchmark);
+      tr.innerHTML = `
+        <td class="metric">${r.Metric}</td>
+        <td class="num muted">${formatValue(r.Metric, r.Last3MoAvg)}</td>
+        <td class="num strong">${formatValue(r.Metric, r.CurrentMonth)}</td>
+        <td class="num">${formatValue(r.Metric, r.Benchmark)}</td>
+        <td class="num ${v.cls}">${v.text}</td>
+        <td class="num muted">${formatValue(r.Metric, r.YTDAvg)}</td>
+      `;
+      tbody.appendChild(tr);
+    });
+  });
+}
+
+function buildProgramTable(rows) {
+  const tbody = document.querySelector("#programTable tbody");
+  tbody.innerHTML = "";
+
+  rows.forEach(r => {
+    const completion = Number(r.CompletionPct);
+    const bench = Number(r.BenchmarkPct);
+    const diff = completion - bench;
+    const good = diff >= 0;
+    const cls = good ? "good" : "bad";
+    const arrow = good ? "↑" : "↓";
+
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td class="metric"><strong>${r.Program}</strong></td>
+      <td class="num muted">${Number(r.Eligible).toLocaleString()}</td>
+      <td class="num muted">${Number(r.Engaged).toLocaleString()}</td>
+      <td class="num muted">${Number(r.Completed).toLocaleString()}</td>
+      <td class="num strong">${completion.toFixed(1)}%</td>
+      <td class="num">${bench.toFixed(1)}%</td>
+      <td class="num ${cls}">${diff >= 0 ? "+" : ""}${diff.toFixed(1)} pts ${arrow}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+function renderLogCards(rows) {
+  const feed = $("logFeed");
+  feed.innerHTML = "";
+
+  rows.forEach(r => {
+    const tags = (r.Tags || "").split(",").map(s => s.trim()).filter(Boolean);
+
+    const tagHtml = tags.map(t => `<span class="pill pill-${t.toLowerCase()}">${t}</span>`).join("");
+    const icdHtml = r.ICD10 ? `<span class="pill pill-icd">${r.ICD10}</span>` : "";
+
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+      <div class="card-top">
+        <div class="avatar">👤</div>
+        <div class="card-main">
+          <div class="name-row">
+            <div class="name">${r.Patient}</div>
+            <div class="pills">${tagHtml}${icdHtml}</div>
+          </div>
+          <div class="meta">
+            <span class="date">📅 ${r.Date}</span>
+            <span class="pill pill-org">${r.Org}</span>
+            <span class="pill pill-event">${r.Event}</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="label">FACILITY</div>
+        <div class="value">${r.Facility}</div>
+        <div class="label" style="margin-top:10px;">DIAGNOSIS</div>
+        <div class="value italic">${r.Diagnosis}</div>
+      </div>
+    `;
+    feed.appendChild(card);
+  });
+
+  $("totalCount").textContent = `${rows.length} Total`;
+}
+
+function populateEventFilter(allRows) {
+  const select = $("eventSelect");
+  const events = Array.from(new Set(allRows.map(r => r.Event))).sort();
+  select.innerHTML = "";
+  const optAll = document.createElement("option");
+  optAll.value = "ALL";
+  optAll.textContent = "All Events";
   select.appendChild(optAll);
-  values.forEach(v=>{
-    const opt = document.createElement('option');
-    opt.value = v;
-    opt.textContent = v;
+
+  events.forEach(e => {
+    const opt = document.createElement("option");
+    opt.value = e;
+    opt.textContent = e;
     select.appendChild(opt);
   });
 }
 
-function renderPerformanceTable(rows){
-  const tbody = document.getElementById('performanceTbody');
-  tbody.innerHTML = '';
+function filterLog(allRows) {
+  const ev = $("eventSelect").value;
+  return allRows.filter(r => (ev === "ALL" ? true : r.Event === ev));
+}
 
-  // Section header
-  const trSection = document.createElement('tr');
-  trSection.className = 'section-row';
-  trSection.innerHTML = `<td colspan="5">UTILIZATION</td>`;
-  tbody.appendChild(trSection);
-
-  const order = ['Readmission Rate (%)','INP Admits/1,000','ER Admits/1,000'];
-
-  order.forEach(kpi=>{
-    const r = rows.find(x=>x.KPI===kpi);
-    if(!r) return;
-
-    const isPct = kpi.includes('Rate');
-    const mom = Number(r.MoM);
-    const momGood = (kpi.includes('Admits') || kpi.includes('Readmission')) ? mom < 0 : mom > 0;
-    const arrow = momGood ? '↓' : '↑';
-    const cls = momGood ? 'good' : 'bad';
-
-    const momText = isPct ? `${mom>0?'+':''}${mom.toFixed(1)} pts` : `${mom>0?'+':''}${mom.toFixed(0)}`;
-    const tr = document.createElement('tr');
-    tr.innerHTML = `
-      <td class="col-metric">${kpi}</td>
-      <td class="num">${isPct ? fmtPct(r.Last3) : fmtNum(r.Last3)}</td>
-      <td class="num"><b>${isPct ? fmtPct(r.Current) : fmtNum(r.Current)}</b></td>
-      <td class="num"><span class="${cls}">${momText} ${arrow}</span></td>
-      <td class="num">${isPct ? fmtPct(r.YTD) : fmtNum(r.YTD)}</td>
-    `;
-    tbody.appendChild(tr);
+function wireExport(excelFilename) {
+  const btn = $("exportBtn");
+  btn.addEventListener("click", () => {
+    const link = document.createElement("a");
+    link.href = excelFilename;
+    link.download = excelFilename.split("/").pop();
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
   });
 }
 
-function renderProgramOutcomes(rows){
-  const tbody = document.getElementById('programTbody');
-  tbody.innerHTML = '';
-
-  rows.forEach(r=>{
-    const completion = Number(r.CompletionPct);
-    const trend = (r.MoM||'').toLowerCase();
-    const arrow = trend==='down' ? '↓' : (trend==='up' ? '↑' : '—');
-    const cls = trend==='down' ? 'bad' : (trend==='up' ? 'good' : 'muted');
-
-    const tr = document.createElement('tr');
-    tr.innerHTML = `
-      <td class="col-program"><b>${r.Program}</b></td>
-      <td class="num">${fmtNum(r.Eligible)}</td>
-      <td class="num">${fmtNum(r.Engaged)}</td>
-      <td class="num">${fmtNum(r.Completed)}</td>
-      <td class="num"><span class="pct">${completion.toFixed(1)}%</span></td>
-      <td class="num"><span class="${cls}">${arrow}</span></td>
-    `;
-    tbody.appendChild(tr);
-  });
-}
-
-function pill(label, cls){
-  return `<span class="tag ${cls||''}">${label}</span>`;
-}
-
-function renderFeed(rows){
-  const feed = document.getElementById('feed');
-  feed.innerHTML = '';
-
-  const total = document.getElementById('totalCount');
-  total.textContent = `${rows.length} Total`;
-
-  rows.forEach(r=>{
-    const tags = Array.isArray(r.Tags) ? r.Tags : (typeof r.Tags === 'string' ? r.Tags.split(',').map(s=>s.trim()).filter(Boolean) : []);
-    // program tags as colored pills
-    const tagHtml = tags.map(t=>{
-      const key=t.toUpperCase();
-      const cls = key==='TCM' ? 'tcm' :
-                  key==='CCM' ? 'ccm' :
-                  key==='RPM' ? 'rpm' :
-                  key==='AWV' ? 'awv' :
-                  key==='ACP' ? 'acp' :
-                  key==='SDOH' ? 'sdoh' : '';
-      return pill(key, cls);
-    }).join('');
-
-    const tr = document.createElement('div');
-    tr.className = 'tile';
-    tr.innerHTML = `
-      <div class="tile-top">
-        <div class="row gap10">
-          <div class="avatar">👤</div>
-          <div>
-            <div class="patient">
-              <span class="name">${r.Patient}</span>
-              <span class="tags">${tagHtml}</span>
-            </div>
-            <div class="meta">
-              <span class="icon">📅</span> ${r.Date}
-              <span class="pill org">${r.Org}</span>
-              <span class="pill event">${r.Event}</span>
-            </div>
-          </div>
-        </div>
-        <div class="icd">${r.ICD10||''}</div>
-      </div>
-
-      <div class="line"></div>
-
-      <div class="block">
-        <div class="label">FACILITY</div>
-        <div class="value">${r.Facility}</div>
-      </div>
-
-      <div class="block diag">
-        <div class="label">DIAGNOSIS</div>
-        <div class="value"><i>${r.Diagnosis}</i></div>
-      </div>
-    `;
-    feed.appendChild(tr);
-  });
-}
-
-async function init(){
-  try{
+(async function init() {
+  try {
     const [pmRows, poRows, logRows] = await Promise.all([
-      loadJSON('./data/performance_metrics.json'),
-      loadJSON('./data/program_outcomes.json'),
-      loadJSON('./data/utilization_log.json')
+      loadJSON("./data/performance_metrics.json"),
+      loadJSON("./data/program_outcomes.json"),
+      loadJSON("./data/utilization_log.json"),
     ]);
 
-    // ACN-only dashboard
-    const org = 'ACN';
+    buildPerformanceTable(pmRows);
+    buildProgramTable(poRows);
 
-    // Event dropdown
-    const eventSelect = document.getElementById('eventFilter');
-    const events = uniq(logRows.map(r=>r.Event).filter(Boolean));
-    populateSelect(eventSelect, events, 'All Events');
+    populateEventFilter(logRows);
+    $("eventSelect").addEventListener("change", () => renderLogCards(filterLog(logRows)));
 
-    // Initial render
-    renderPerformanceTable(pmRows.filter(r=>r.Org===org));
-    renderProgramOutcomes(poRows.filter(r=>r.Org===org));
+    renderLogCards(filterLog(logRows));
 
-    function apply(){
-      const ev = eventSelect.value;
-      let filtered = logRows.filter(r=>r.Org===org);
-      if(ev) filtered = filtered.filter(r=>r.Event===ev);
-
-      // sort by date desc (MM/DD/YYYY)
-      filtered.sort((a,b)=>{
-        const pa = Date.parse(a.Date);
-        const pb = Date.parse(b.Date);
-        if(!Number.isNaN(pa) && !Number.isNaN(pb)) return pb-pa;
-        return 0;
-      });
-
-      renderFeed(filtered);
-    }
-
-    eventSelect.addEventListener('change', apply);
-    apply();
-  }catch(err){
-    console.error(err);
-    alert('Failed to load dashboard data. Check console for details.');
+    wireExport("./data/Alante_Performance_Data.xlsx");
+  } catch (e) {
+    console.error(e);
+    alert("Failed to load dashboard data. Check console for details.");
   }
-}
-
-document.addEventListener('DOMContentLoaded', init);
+})();

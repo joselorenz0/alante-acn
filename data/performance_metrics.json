@@ -1,26 +1,29 @@
 [
   {
     "Org": "ACN",
-    "KPI": "Readmission Rate (%)",
-    "Last3": 13.2,
-    "Current": 12.1,
-    "MoM": -1.1,
-    "YTD": 12.8
+    "Section": "UTILIZATION",
+    "Metric": "Readmission Rate (%)",
+    "Last3MoAvg": 13.4,
+    "CurrentMonth": 12.9,
+    "Benchmark": 17.0,
+    "YTDAvg": 13.2
   },
   {
     "Org": "ACN",
-    "KPI": "INP Admits/1,000",
-    "Last3": 238,
-    "Current": 229,
-    "MoM": -9,
-    "YTD": 235
+    "Section": "UTILIZATION",
+    "Metric": "INP Admits/1,000",
+    "Last3MoAvg": 235.0,
+    "CurrentMonth": 228.0,
+    "Benchmark": 250.0,
+    "YTDAvg": 232.0
   },
   {
     "Org": "ACN",
-    "KPI": "ER Admits/1,000",
-    "Last3": 287,
-    "Current": 279,
-    "MoM": -8,
-    "YTD": 284
+    "Section": "UTILIZATION",
+    "Metric": "ER Admits/1,000",
+    "Last3MoAvg": 292.0,
+    "CurrentMonth": 285.0,
+    "Benchmark": 300.0,
+    "YTDAvg": 290.0
   }
 ]
