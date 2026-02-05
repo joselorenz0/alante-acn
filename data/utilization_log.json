@@ -1,0 +1,202 @@
+[
+  {
+    "Org":"ACN",
+    "Patient":"Smith, James",
+    "Date":"12\/05\/2025",
+    "Event":"INP Admit",
+    "Facility":"Abrazo Central Campus",
+    "Diagnosis":"Type 2 diabetes mellitus without complications",
+    "ICD10":"E11.9",
+    "Programs":"CCM"
+  },
+  {
+    "Org":"ACN",
+    "Patient":"Johnson, Mary",
+    "Date":"12\/21\/2025",
+    "Event":"INP Admit",
+    "Facility":"Banner Desert Medical Center",
+    "Diagnosis":"Type 2 diabetes mellitus without complications",
+    "ICD10":"E11.9",
+    "Programs":""
+  },
+  {
+    "Org":"ACN",
+    "Patient":"Williams, Robert",
+    "Date":"12\/25\/2025",
+    "Event":"ER Admit",
+    "Facility":"Valleywise Medical Center",
+    "Diagnosis":"Type 2 diabetes mellitus without complications",
+    "ICD10":"E11.9",
+    "Programs":""
+  },
+  {
+    "Org":"ACN",
+    "Patient":"Brown, Patricia",
+    "Date":"12\/08\/2025",
+    "Event":"ER DC",
+    "Facility":"Valleywise Medical Center",
+    "Diagnosis":"Heart failure, unspecified",
+    "ICD10":"I50.9",
+    "Programs":"ACP, RPM, TCM"
+  },
+  {
+    "Org":"ACN",
+    "Patient":"Jones, John",
+    "Date":"12\/20\/2025",
+    "Event":"INP DC",
+    "Facility":"Abrazo Central Campus",
+    "Diagnosis":"Complicated urinary tract infection",
+    "ICD10":"N39.0",
+    "Programs":"CCM"
+  },
+  {
+    "Org":"ACN",
+    "Patient":"Nguyen, Linda",
+    "Date":"12\/15\/2025",
+    "Event":"INP Admit",
+    "Facility":"Banner Desert Medical Center",
+    "Diagnosis":"Type 2 diabetes mellitus without complications",
+    "ICD10":"E11.9",
+    "Programs":""
+  },
+  {
+    "Org":"ACN",
+    "Patient":"Martinez, Carlos",
+    "Date":"12\/14\/2025",
+    "Event":"INP DC",
+    "Facility":"Banner Univ Phoenix",
+    "Diagnosis":"Acute kidney injury, resolved",
+    "ICD10":"N17.9",
+    "Programs":"ACP, TCM, AWV"
+  },
+  {
+    "Org":"ACN",
+    "Patient":"Garcia, Sofia",
+    "Date":"12\/23\/2025",
+    "Event":"INP DC",
+    "Facility":"Mayo Clinic Hospital Phoenix",
+    "Diagnosis":"Migraine headache",
+    "ICD10":"G43.909",
+    "Programs":"SDOH"
+  },
+  {
+    "Org":"ACN",
+    "Patient":"Lopez, Maria",
+    "Date":"12\/23\/2025",
+    "Event":"ER Admit",
+    "Facility":"Abrazo Central Campus",
+    "Diagnosis":"Essential (primary) hypertension",
+    "ICD10":"I10",
+    "Programs":""
+  },
+  {
+    "Org":"ACN",
+    "Patient":"Shah, Priya",
+    "Date":"12\/18\/2025",
+    "Event":"ER DC",
+    "Facility":"Abrazo Central Campus",
+    "Diagnosis":"Type 2 diabetes mellitus without complications",
+    "ICD10":"E11.9",
+    "Programs":"SDOH, RPM, CCM"
+  },
+  {
+    "Org":"ACN",
+    "Patient":"O'Connor, Brian",
+    "Date":"12\/14\/2025",
+    "Event":"ER Admit",
+    "Facility":"Abrazo Central Campus",
+    "Diagnosis":"Acute kidney injury, resolved",
+    "ICD10":"N17.9",
+    "Programs":""
+  },
+  {
+    "Org":"ACN",
+    "Patient":"Patel, Nisha",
+    "Date":"12\/06\/2025",
+    "Event":"ER Admit",
+    "Facility":"HonorHealth John C. Lincoln",
+    "Diagnosis":"Chronic obstructive pulmonary disease, unspecified",
+    "ICD10":"J44.9",
+    "Programs":"AWV, RPM, CCM"
+  },
+  {
+    "Org":"ACN",
+    "Patient":"Kumar, Ramesh",
+    "Date":"12\/15\/2025",
+    "Event":"ER Admit",
+    "Facility":"Banner Univ Phoenix",
+    "Diagnosis":"Essential (primary) hypertension",
+    "ICD10":"I10",
+    "Programs":"AWV, RPM"
+  },
+  {
+    "Org":"ACN",
+    "Patient":"Brooks, Danielle",
+    "Date":"12\/23\/2025",
+    "Event":"INP DC",
+    "Facility":"Valleywise Medical Center",
+    "Diagnosis":"Heart failure, unspecified",
+    "ICD10":"I50.9",
+    "Programs":"AWV, SDOH, CCM"
+  },
+  {
+    "Org":"ACN",
+    "Patient":"Wilson, Thomas",
+    "Date":"12\/17\/2025",
+    "Event":"ER Admit",
+    "Facility":"HonorHealth Scottsdale Shea",
+    "Diagnosis":"Chronic obstructive pulmonary disease, unspecified",
+    "ICD10":"J44.9",
+    "Programs":"SDOH, ACP"
+  },
+  {
+    "Org":"ACN",
+    "Patient":"Torres, Ana",
+    "Date":"12\/12\/2025",
+    "Event":"ER DC",
+    "Facility":"Mayo Clinic Hospital Phoenix",
+    "Diagnosis":"Chest pain, non-cardiac",
+    "ICD10":"R07.9",
+    "Programs":"CCM"
+  },
+  {
+    "Org":"ACN",
+    "Patient":"Ahmed, Farah",
+    "Date":"12\/09\/2025",
+    "Event":"INP Admit",
+    "Facility":"Banner Univ Phoenix",
+    "Diagnosis":"Sepsis, unspecified organism",
+    "ICD10":"A41.9",
+    "Programs":""
+  },
+  {
+    "Org":"ACN",
+    "Patient":"Kim, Hannah",
+    "Date":"12\/21\/2025",
+    "Event":"ER DC",
+    "Facility":"St Luke's Medical Center Phoenix",
+    "Diagnosis":"Chronic obstructive pulmonary disease, unspecified",
+    "ICD10":"J44.9",
+    "Programs":"AWV, ACP, SDOH"
+  },
+  {
+    "Org":"ACN",
+    "Patient":"Chen, Victor",
+    "Date":"12\/09\/2025",
+    "Event":"INP Admit",
+    "Facility":"St Luke's Medical Center Phoenix",
+    "Diagnosis":"Pneumonia, unspecified organism",
+    "ICD10":"J18.9",
+    "Programs":"SDOH, RPM"
+  },
+  {
+    "Org":"ACN",
+    "Patient":"Hernandez, Luis",
+    "Date":"12\/22\/2025",
+    "Event":"ER DC",
+    "Facility":"HonorHealth John C. Lincoln",
+    "Diagnosis":"Pneumonia, unspecified organism",
+    "ICD10":"J18.9",
+    "Programs":"TCM, RPM, CCM"
+  }
+]
