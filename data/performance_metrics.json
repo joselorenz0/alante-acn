@@ -1,0 +1,242 @@
+[
+  {
+    "Org": "PCCA",
+    "KPI": "Readmission Rate (%)",
+    "Current": 14.9,
+    "Benchmark": 17
+  },
+  {
+    "Org": "PCCA",
+    "KPI": "INP Admits/1,000",
+    "Current": 228,
+    "Benchmark": 250
+  },
+  {
+    "Org": "PCCA",
+    "KPI": "ER Admits/1,000",
+    "Current": 268,
+    "Benchmark": 300
+  },
+  {
+    "Org": "PCCA",
+    "KPI": "A1c Controlled %",
+    "Current": 62,
+    "Benchmark": 58
+  },
+  {
+    "Org": "PCCA",
+    "KPI": "BP Control %",
+    "Current": 74,
+    "Benchmark": 72
+  },
+  {
+    "Org": "PCCA",
+    "KPI": "Depression Screening w/ F/U",
+    "Current": 66,
+    "Benchmark": 64
+  },
+  {
+    "Org": "PCCA",
+    "KPI": "Breast Cancer Screening %",
+    "Current": 75,
+    "Benchmark": 73
+  },
+  {
+    "Org": "PCCA",
+    "KPI": "Colorectal Screening %",
+    "Current": 67,
+    "Benchmark": 64
+  },
+  {
+    "Org": "Novum",
+    "KPI": "Readmission Rate (%)",
+    "Current": 14.2,
+    "Benchmark": 17
+  },
+  {
+    "Org": "Novum",
+    "KPI": "INP Admits/1,000",
+    "Current": 235,
+    "Benchmark": 250
+  },
+  {
+    "Org": "Novum",
+    "KPI": "ER Admits/1,000",
+    "Current": 276,
+    "Benchmark": 300
+  },
+  {
+    "Org": "Novum",
+    "KPI": "A1c Controlled %",
+    "Current": 65,
+    "Benchmark": 58
+  },
+  {
+    "Org": "Novum",
+    "KPI": "BP Control %",
+    "Current": 76,
+    "Benchmark": 72
+  },
+  {
+    "Org": "Novum",
+    "KPI": "Depression Screening w/ F/U",
+    "Current": 68,
+    "Benchmark": 64
+  },
+  {
+    "Org": "Novum",
+    "KPI": "Breast Cancer Screening %",
+    "Current": 78,
+    "Benchmark": 73
+  },
+  {
+    "Org": "Novum",
+    "KPI": "Colorectal Screening %",
+    "Current": 69,
+    "Benchmark": 64
+  },
+  {
+    "Org": "ACN",
+    "KPI": "Readmission Rate (%)",
+    "Current": 15.4,
+    "Benchmark": 17
+  },
+  {
+    "Org": "ACN",
+    "KPI": "INP Admits/1,000",
+    "Current": 232,
+    "Benchmark": 250
+  },
+  {
+    "Org": "ACN",
+    "KPI": "ER Admits/1,000",
+    "Current": 285,
+    "Benchmark": 300
+  },
+  {
+    "Org": "ACN",
+    "KPI": "A1c Controlled %",
+    "Current": 61,
+    "Benchmark": 58
+  },
+  {
+    "Org": "ACN",
+    "KPI": "BP Control %",
+    "Current": 73,
+    "Benchmark": 72
+  },
+  {
+    "Org": "ACN",
+    "KPI": "Depression Screening w/ F/U",
+    "Current": 67,
+    "Benchmark": 64
+  },
+  {
+    "Org": "ACN",
+    "KPI": "Breast Cancer Screening %",
+    "Current": 76,
+    "Benchmark": 73
+  },
+  {
+    "Org": "ACN",
+    "KPI": "Colorectal Screening %",
+    "Current": 66,
+    "Benchmark": 64
+  },
+  {
+    "Org": "DKA",
+    "KPI": "Readmission Rate (%)",
+    "Current": 15.8,
+    "Benchmark": 17
+  },
+  {
+    "Org": "DKA",
+    "KPI": "INP Admits/1,000",
+    "Current": 241,
+    "Benchmark": 250
+  },
+  {
+    "Org": "DKA",
+    "KPI": "ER Admits/1,000",
+    "Current": 289,
+    "Benchmark": 300
+  },
+  {
+    "Org": "DKA",
+    "KPI": "A1c Controlled %",
+    "Current": 63,
+    "Benchmark": 58
+  },
+  {
+    "Org": "DKA",
+    "KPI": "BP Control %",
+    "Current": 75,
+    "Benchmark": 72
+  },
+  {
+    "Org": "DKA",
+    "KPI": "Depression Screening w/ F/U",
+    "Current": 69,
+    "Benchmark": 64
+  },
+  {
+    "Org": "DKA",
+    "KPI": "Breast Cancer Screening %",
+    "Current": 77,
+    "Benchmark": 73
+  },
+  {
+    "Org": "DKA",
+    "KPI": "Colorectal Screening %",
+    "Current": 68,
+    "Benchmark": 64
+  },
+  {
+    "Org": "Alante Primary Care",
+    "KPI": "Readmission Rate (%)",
+    "Current": 13.8,
+    "Benchmark": 17
+  },
+  {
+    "Org": "Alante Primary Care",
+    "KPI": "INP Admits/1,000",
+    "Current": 225,
+    "Benchmark": 250
+  },
+  {
+    "Org": "Alante Primary Care",
+    "KPI": "ER Admits/1,000",
+    "Current": 262,
+    "Benchmark": 300
+  },
+  {
+    "Org": "Alante Primary Care",
+    "KPI": "A1c Controlled %",
+    "Current": 66,
+    "Benchmark": 58
+  },
+  {
+    "Org": "Alante Primary Care",
+    "KPI": "BP Control %",
+    "Current": 78,
+    "Benchmark": 72
+  },
+  {
+    "Org": "Alante Primary Care",
+    "KPI": "Depression Screening w/ F/U",
+    "Current": 71,
+    "Benchmark": 64
+  },
+  {
+    "Org": "Alante Primary Care",
+    "KPI": "Breast Cancer Screening %",
+    "Current": 79,
+    "Benchmark": 73
+  },
+  {
+    "Org": "Alante Primary Care",
+    "KPI": "Colorectal Screening %",
+    "Current": 70,
+    "Benchmark": 64
+  }
+]

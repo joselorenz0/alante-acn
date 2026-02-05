@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alante Performance Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div>
+        <h1>Alante Performance Dashboard</h1>
+        <div class="sub">Date of Report: <span id="reportDate">Dec 2025</span></div>
+      </div>
+      <a class="btn" href="Alante Performance Data.xlsx" download>
+        <span class="btn-icon">⬇</span>
+        Export to Excel
+      </a>
+    </header>
+
+    <div class="global-filter">
+      <label>
+        Org
+        <select id="globalOrgFilter"></select>
+      </label>
+    </div>
+
+    <div class="layout">
+      <main class="left">
+        <section class="card">
+          <div class="card-title">Performance Metrics</div>
+          <div class="card-body">
+            <table class="table" id="performanceTable">
+              <thead>
+                <tr>
+                  <th class="col-metric">Metric</th>
+                  <th>Last 3-Mth Avg</th>
+                  <th>Current Month</th>
+                  <th>Benchmark</th>
+                  <th>Variance</th>
+                  <th>YTD Avg</th>
+                </tr>
+              </thead>
+              <tbody id="performanceTbody"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="card" style="margin-top:18px">
+          <div class="card-title">Program Outcomes</div>
+          <div class="card-body">
+            <table class="table" id="programTable">
+              <thead>
+                <tr>
+                  <th>Program</th>
+                  <th>Eligible</th>
+                  <th>Engaged</th>
+                  <th>Completed</th>
+                  <th>Completion %</th>
+                  <th>MoM</th>
+                </tr>
+              </thead>
+              <tbody id="programTbody"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+
+      <aside class="right">
+        <section class="card sticky">
+          <div class="card-title row-between">
+            <div class="row gap8">
+              <span class="dot"></span>
+              <span>Utilization Activity Log</span>
+            </div>
+            <span class="pill" id="totalCount">0 Total</span>
+          </div>
+
+          <div class="filters">
+            <label>
+              Org
+              <select id="orgFilter"></select>
+            </label>
+            <label>
+              Event
+              <select id="eventFilter"></select>
+            </label>
+          </div>
+
+          <div class="feed" id="feed"></div>
+        </section>
+      </aside>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

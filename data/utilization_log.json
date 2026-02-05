@@ -1,0 +1,512 @@
+[
+  {
+    "Patient": "Smith, James",
+    "Date": "12/25/2025",
+    "Org": "DKA",
+    "Event": "INP Admit",
+    "Facility": "General Hospital",
+    "Diagnosis": "Essential (primary) hypertension",
+    "ICD10": "I10",
+    "Programs": ["TCM", "CCM", "RPM"]
+  },
+  {
+    "Patient": "Johnson, Mary",
+    "Date": "12/24/2025",
+    "Org": "Novum",
+    "Event": "INP DC",
+    "Facility": "Memorial Medical Center",
+    "Diagnosis": "Type 2 diabetes mellitus without complications",
+    "ICD10": "E11.9",
+    "Programs": ["CCM"]
+  },
+  {
+    "Patient": "Williams, Robert",
+    "Date": "12/23/2025",
+    "Org": "ACN",
+    "Event": "ER Admit",
+    "Facility": "City Clinic",
+    "Diagnosis": "Chronic obstructive pulmonary disease, unspecified",
+    "ICD10": "J44.9",
+    "Programs": ["TCM", "CCM", "RPM"]
+  },
+  {
+    "Patient": "Brown, Patricia",
+    "Date": "12/22/2025",
+    "Org": "Alante Primary Care",
+    "Event": "ER DC",
+    "Facility": "Valley Care",
+    "Diagnosis": "Heart failure, unspecified",
+    "ICD10": "I50.9",
+    "Programs": ["TCM", "CCM", "RPM"]
+  },
+  {
+    "Patient": "Jones, John",
+    "Date": "12/21/2025",
+    "Org": "PCCA",
+    "Event": "INP Admit",
+    "Facility": "General Hospital",
+    "Diagnosis": "Essential (primary) hypertension",
+    "ICD10": "I10",
+    "Programs": ["CCM", "RPM"]
+  },
+  {
+    "Patient": "Smith, James",
+    "Date": "12/20/2025",
+    "Org": "DKA",
+    "Event": "INP DC",
+    "Facility": "Memorial Medical Center",
+    "Diagnosis": "Type 2 diabetes mellitus without complications",
+    "ICD10": "E11.9",
+    "Programs": ["TCM", "RPM"]
+  },
+  {
+    "Patient": "Martinez, Carlos",
+    "Date": "12/21/2025",
+    "Org": "PCCA",
+    "Event": "ER Admit",
+    "Facility": "Banner Univ Phoenix",
+    "Diagnosis": "Chest pain, non-cardiac",
+    "ICD10": "R07.9",
+    "Programs": ["ACP"]
+  },
+  {
+    "Patient": "Nguyen, Linda",
+    "Date": "12/21/2025",
+    "Org": "DKA",
+    "Event": "INP DC",
+    "Facility": "St Joseph's Phoenix",
+    "Diagnosis": "Acute kidney injury, resolved",
+    "ICD10": "N17.9",
+    "Programs": ["CCM"]
+  },
+  {
+    "Patient": "Patel, Ramesh",
+    "Date": "12/20/2025",
+    "Org": "Novum",
+    "Event": "ER DC",
+    "Facility": "HonorHealth Osborn",
+    "Diagnosis": "Uncontrolled hypertension",
+    "ICD10": "I10",
+    "Programs": ["CCM", "TCM"]
+  },
+  {
+    "Patient": "Garcia, Sofia",
+    "Date": "12/20/2025",
+    "Org": "ACN",
+    "Event": "INP Admit",
+    "Facility": "Valleywise Medical Center",
+    "Diagnosis": "Pneumonia",
+    "ICD10": "J18.9",
+    "Programs": []
+  },
+  {
+    "Patient": "Wilson, Thomas",
+    "Date": "12/19/2025",
+    "Org": "PCCA",
+    "Event": "ER Admit",
+    "Facility": "Abrazo Central Campus",
+    "Diagnosis": "Dizziness and syncope",
+    "ICD10": "R55",
+    "Programs": []
+  },
+  {
+    "Patient": "Ahmed, Farah",
+    "Date": "12/19/2025",
+    "Org": "DKA",
+    "Event": "INP DC",
+    "Facility": "Banner Desert Medical Center",
+    "Diagnosis": "Heart failure exacerbation",
+    "ICD10": "I50.9",
+    "Programs": ["SDOH"]
+  },
+  {
+    "Patient": "Reynolds, Mark",
+    "Date": "12/18/2025",
+    "Org": "Novum",
+    "Event": "ER DC",
+    "Facility": "HonorHealth Deer Valley",
+    "Diagnosis": "Asthma exacerbation",
+    "ICD10": "J45.901",
+    "Programs": []
+  },
+  {
+    "Patient": "Lopez, Maria",
+    "Date": "12/18/2025",
+    "Org": "ACN",
+    "Event": "INP Admit",
+    "Facility": "St Luke's Medical Center Phoenix",
+    "Diagnosis": "Complicated urinary tract infection",
+    "ICD10": "N39.0",
+    "Programs": ["TCM", "ACP", "AWV"]
+  },
+  {
+    "Patient": "Hernandez, Luis",
+    "Date": "12/17/2025",
+    "Org": "PCCA",
+    "Event": "ER Admit",
+    "Facility": "Banner Thunderbird Medical Center",
+    "Diagnosis": "Abdominal pain",
+    "ICD10": "R10.9",
+    "Programs": ["AWV"]
+  },
+  {
+    "Patient": "Kim, Hannah",
+    "Date": "12/17/2025",
+    "Org": "Novum",
+    "Event": "INP DC",
+    "Facility": "Mayo Clinic Hospital Phoenix",
+    "Diagnosis": "Post-surgical recovery",
+    "ICD10": "Z48.89",
+    "Programs": ["SDOH", "AWV", "ACP"]
+  },
+  {
+    "Patient": "O'Connor, Brian",
+    "Date": "12/16/2025",
+    "Org": "ACN",
+    "Event": "ER DC",
+    "Facility": "HonorHealth John C. Lincoln",
+    "Diagnosis": "Migraine headache",
+    "ICD10": "G43.909",
+    "Programs": ["TCM", "AWV", "ACP"]
+  },
+  {
+    "Patient": "Shah, Priya",
+    "Date": "12/16/2025",
+    "Org": "DKA",
+    "Event": "INP Admit",
+    "Facility": "Banner Estrella Medical Center",
+    "Diagnosis": "Sepsis, suspected urinary source",
+    "ICD10": "A41.9",
+    "Programs": []
+  },
+  {
+    "Patient": "Miller, Anthony",
+    "Date": "12/15/2025",
+    "Org": "PCCA",
+    "Event": "ER Admit",
+    "Facility": "Abrazo Arrowhead Campus",
+    "Diagnosis": "Fall with minor head injury",
+    "ICD10": "W19",
+    "Programs": ["CCM"]
+  },
+  {
+    "Patient": "Torres, Ana",
+    "Date": "12/15/2025",
+    "Org": "Novum",
+    "Event": "INP DC",
+    "Facility": "Valleywise Medical Center",
+    "Diagnosis": "Diabetic foot infection",
+    "ICD10": "E11.621",
+    "Programs": ["RPM", "CCM"]
+  },
+  {
+    "Patient": "Patel, Nisha",
+    "Date": "12/14/2025",
+    "Org": "ACN",
+    "Event": "ER Admit",
+    "Facility": "Banner Univ Phoenix",
+    "Diagnosis": "Palpitations",
+    "ICD10": "R00.2",
+    "Programs": ["CCM", "SDOH", "ACP"]
+  },
+  {
+    "Patient": "Gomez, Raul",
+    "Date": "12/14/2025",
+    "Org": "DKA",
+    "Event": "ER DC",
+    "Facility": "St Joseph's Phoenix",
+    "Diagnosis": "COPD exacerbation",
+    "ICD10": "J44.1",
+    "Programs": ["CCM", "ACP", "RPM"]
+  },
+  {
+    "Patient": "Chen, Victor",
+    "Date": "12/13/2025",
+    "Org": "PCCA",
+    "Event": "INP Admit",
+    "Facility": "Banner Desert Medical Center",
+    "Diagnosis": "Stroke evaluation",
+    "ICD10": "I63.9",
+    "Programs": []
+  },
+  {
+    "Patient": "Alvarez, Miguel",
+    "Date": "12/12/2025",
+    "Org": "Novum",
+    "Event": "ER Admit",
+    "Facility": "Abrazo Central Campus",
+    "Diagnosis": "Low back pain",
+    "ICD10": "M54.5",
+    "Programs": ["SDOH"]
+  },
+  {
+    "Patient": "Singh, Arjun",
+    "Date": "12/12/2025",
+    "Org": "DKA",
+    "Event": "INP Admit",
+    "Facility": "Banner Univ Phoenix",
+    "Diagnosis": "Acute coronary syndrome",
+    "ICD10": "I24.9",
+    "Programs": ["SDOH", "ACP", "TCM"]
+  },
+  {
+    "Patient": "Brooks, Danielle",
+    "Date": "12/11/2025",
+    "Org": "ACN",
+    "Event": "ER DC",
+    "Facility": "HonorHealth Scottsdale Shea",
+    "Diagnosis": "Anxiety disorder",
+    "ICD10": "F41.9",
+    "Programs": []
+  },
+  {
+    "Patient": "Foster, Kevin",
+    "Date": "12/11/2025",
+    "Org": "PCCA",
+    "Event": "ER Admit",
+    "Facility": "Banner Thunderbird Medical Center",
+    "Diagnosis": "Cellulitis of leg",
+    "ICD10": "L03.116",
+    "Programs": []
+  },
+  {
+    "Patient": "Ramirez, Isabel",
+    "Date": "12/10/2025",
+    "Org": "Novum",
+    "Event": "INP DC",
+    "Facility": "St Luke's Medical Center Phoenix",
+    "Diagnosis": "Dehydration",
+    "ICD10": "E86.0",
+    "Programs": ["SDOH"]
+  },
+  {
+    "Patient": "Ng, Steven",
+    "Date": "12/10/2025",
+    "Org": "DKA",
+    "Event": "ER DC",
+    "Facility": "Mayo Clinic Hospital Phoenix",
+    "Diagnosis": "Vertigo",
+    "ICD10": "R42",
+    "Programs": ["SDOH", "CCM", "TCM"]
+  },
+  {
+    "Patient": "Walker, Denise",
+    "Date": "12/09/2025",
+    "Org": "ACN",
+    "Event": "INP Admit",
+    "Facility": "Valleywise Medical Center",
+    "Diagnosis": "Acute cholecystitis",
+    "ICD10": "K81.0",
+    "Programs": ["AWV"]
+  },
+  {
+    "Patient": "Turner, Paul",
+    "Date": "12/09/2025",
+    "Org": "PCCA",
+    "Event": "ER Admit",
+    "Facility": "Abrazo Arrowhead Campus",
+    "Diagnosis": "Shortness of breath",
+    "ICD10": "R06.02",
+    "Programs": ["SDOH"]
+  },
+  {
+    "Patient": "Morales, Lucia",
+    "Date": "12/08/2025",
+    "Org": "Novum",
+    "Event": "ER DC",
+    "Facility": "Banner Desert Medical Center",
+    "Diagnosis": "Nausea and vomiting",
+    "ICD10": "R11.2",
+    "Programs": ["SDOH", "CCM", "ACP"]
+  },
+  {
+    "Patient": "Hawkins, Robert",
+    "Date": "12/08/2025",
+    "Org": "DKA",
+    "Event": "INP Admit",
+    "Facility": "St Joseph's Phoenix",
+    "Diagnosis": "Gastrointestinal hemorrhage",
+    "ICD10": "K92.2",
+    "Programs": ["TCM", "CCM"]
+  },
+  {
+    "Patient": "Thompson, Sarah",
+    "Date": "12/07/2025",
+    "Org": "PCCA",
+    "Event": "INP DC",
+    "Facility": "Banner Univ Phoenix",
+    "Diagnosis": "Atrial fibrillation",
+    "ICD10": "I48.91",
+    "Programs": ["CCM", "RPM"]
+  },
+  {
+    "Patient": "Rodriguez, Carmen",
+    "Date": "12/07/2025",
+    "Org": "ACN",
+    "Event": "ER Admit",
+    "Facility": "HonorHealth Osborn",
+    "Diagnosis": "Acute bronchitis",
+    "ICD10": "J20.9",
+    "Programs": ["TCM"]
+  },
+  {
+    "Patient": "Lee, David",
+    "Date": "12/06/2025",
+    "Org": "Novum",
+    "Event": "INP Admit",
+    "Facility": "Mayo Clinic Hospital Phoenix",
+    "Diagnosis": "Congestive heart failure",
+    "ICD10": "I50.9",
+    "Programs": ["CCM", "TCM", "RPM"]
+  },
+  {
+    "Patient": "Anderson, Jennifer",
+    "Date": "12/06/2025",
+    "Org": "DKA",
+    "Event": "ER DC",
+    "Facility": "Banner Estrella Medical Center",
+    "Diagnosis": "Hypoglycemia",
+    "ICD10": "E16.2",
+    "Programs": ["CCM", "RPM"]
+  },
+  {
+    "Patient": "White, Michael",
+    "Date": "12/05/2025",
+    "Org": "PCCA",
+    "Event": "ER Admit",
+    "Facility": "Abrazo Central Campus",
+    "Diagnosis": "Acute pancreatitis",
+    "ICD10": "K85.9",
+    "Programs": []
+  },
+  {
+    "Patient": "Harris, Emily",
+    "Date": "12/05/2025",
+    "Org": "ACN",
+    "Event": "INP DC",
+    "Facility": "St Luke's Medical Center Phoenix",
+    "Diagnosis": "Deep vein thrombosis",
+    "ICD10": "I82.40",
+    "Programs": ["CCM", "ACP"]
+  },
+  {
+    "Patient": "Martin, Christopher",
+    "Date": "12/04/2025",
+    "Org": "Novum",
+    "Event": "ER DC",
+    "Facility": "HonorHealth Deer Valley",
+    "Diagnosis": "Gastroesophageal reflux disease",
+    "ICD10": "K21.0",
+    "Programs": []
+  },
+  {
+    "Patient": "Jackson, Angela",
+    "Date": "12/04/2025",
+    "Org": "DKA",
+    "Event": "INP Admit",
+    "Facility": "Banner Desert Medical Center",
+    "Diagnosis": "Acute respiratory failure",
+    "ICD10": "J96.00",
+    "Programs": ["TCM", "CCM"]
+  },
+  {
+    "Patient": "Taylor, Richard",
+    "Date": "12/03/2025",
+    "Org": "PCCA",
+    "Event": "INP DC",
+    "Facility": "Valleywise Medical Center",
+    "Diagnosis": "Peripheral neuropathy",
+    "ICD10": "G62.9",
+    "Programs": ["CCM", "RPM"]
+  },
+  {
+    "Patient": "Moore, Jessica",
+    "Date": "12/03/2025",
+    "Org": "ACN",
+    "Event": "ER Admit",
+    "Facility": "Banner Thunderbird Medical Center",
+    "Diagnosis": "Urinary retention",
+    "ICD10": "R33.9",
+    "Programs": ["SDOH"]
+  },
+  {
+    "Patient": "Clark, William",
+    "Date": "12/02/2025",
+    "Org": "Novum",
+    "Event": "INP DC",
+    "Facility": "St Joseph's Phoenix",
+    "Diagnosis": "Chronic kidney disease stage 3",
+    "ICD10": "N18.3",
+    "Programs": ["CCM", "TCM"]
+  },
+  {
+    "Patient": "Robinson, Michelle",
+    "Date": "12/02/2025",
+    "Org": "DKA",
+    "Event": "ER Admit",
+    "Facility": "HonorHealth John C. Lincoln",
+    "Diagnosis": "Anemia, unspecified",
+    "ICD10": "D64.9",
+    "Programs": ["CCM"]
+  },
+  {
+    "Patient": "Lewis, Daniel",
+    "Date": "12/01/2025",
+    "Org": "PCCA",
+    "Event": "ER DC",
+    "Facility": "Banner Univ Phoenix",
+    "Diagnosis": "Osteoarthritis of knee",
+    "ICD10": "M17.9",
+    "Programs": ["AWV"]
+  },
+  {
+    "Patient": "Young, Stephanie",
+    "Date": "12/01/2025",
+    "Org": "ACN",
+    "Event": "INP Admit",
+    "Facility": "Abrazo Arrowhead Campus",
+    "Diagnosis": "Pulmonary embolism",
+    "ICD10": "I26.99",
+    "Programs": ["TCM", "CCM"]
+  },
+  {
+    "Patient": "Hall, George",
+    "Date": "11/30/2025",
+    "Org": "Novum",
+    "Event": "ER Admit",
+    "Facility": "Mayo Clinic Hospital Phoenix",
+    "Diagnosis": "Hypothyroidism, unspecified",
+    "ICD10": "E03.9",
+    "Programs": ["CCM"]
+  },
+  {
+    "Patient": "Allen, Nancy",
+    "Date": "11/30/2025",
+    "Org": "DKA",
+    "Event": "INP DC",
+    "Facility": "Banner Estrella Medical Center",
+    "Diagnosis": "Diverticulitis of large intestine",
+    "ICD10": "K57.32",
+    "Programs": ["SDOH", "ACP"]
+  },
+  {
+    "Patient": "Wright, Kenneth",
+    "Date": "11/29/2025",
+    "Org": "PCCA",
+    "Event": "INP Admit",
+    "Facility": "HonorHealth Scottsdale Shea",
+    "Diagnosis": "Benign prostatic hyperplasia",
+    "ICD10": "N40.0",
+    "Programs": []
+  },
+  {
+    "Patient": "Scott, Barbara",
+    "Date": "11/29/2025",
+    "Org": "ACN",
+    "Event": "ER DC",
+    "Facility": "St Luke's Medical Center Phoenix",
+    "Diagnosis": "Iron deficiency anemia",
+    "ICD10": "D50.9",
+    "Programs": ["CCM", "AWV"]
+  }
+]
